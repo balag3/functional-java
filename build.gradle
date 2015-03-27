@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
+// Required because retrolambda is on maven central
+repositories {
+    mavenCentral()
+    maven {
+        url "http://repo.bodar.com/"
+    }
+}
+
+apply plugin: 'java'
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'com.googlecode.totallylazy:totallylazy:1.64'
+}
