@@ -8,7 +8,7 @@ import static com.googlecode.totallylazy.numbers.Integers.range;
 import static com.googlecode.totallylazy.numbers.Numbers.sum;
 
 /*
- * This is an example solution.
+ * This is an example solution. (https://projecteuler.net/problem=32)
  */
 public class Problem32 {
 
