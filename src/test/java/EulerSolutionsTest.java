@@ -3,9 +3,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * @author blomqvie
- */
 public class EulerSolutionsTest {
 
     @Test
