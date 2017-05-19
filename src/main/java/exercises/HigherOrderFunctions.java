@@ -8,43 +8,37 @@ public class HigherOrderFunctions {
     // returns a function that increments a given argument with a predefined amount
     // TIP: you can return a lambda function!
     public static Function<Integer, Integer> plus(Integer amount) {
-        // TODO implement
-        return null;
+        return a -> a + amount;
     }
 
     // returns a function that subtracts a given argument with a predefined amount
     public static Function<Integer, Integer> minus(Integer amount) {
-        // TODO implement
-        return null;
+        return a -> a - amount;
     }
 
     // calls 'action' function with the given x argument and returns the result
     // TIP: Have a look at java.util.Function interface
     public static Integer doIt(Integer x, Function<Integer, Integer> action) {
-        // TODO implement
-        return 0;
+        return action.apply(x);
     }
 
     /** combines two functions that both take integer arguments by passing the result from
      * the first function as the argument to the second function, and returns its return value
      */
     public static Function<Integer, Integer> combineInt(Function<Integer, Integer> first, Function<Integer, Integer> second) {
-        // TODO implement
-        return null;
-    }
+        return second.compose(first);
+}
 
     // combines two functions of generic type
     public static <A,B,C> Function<A, C> combine(Function<A,B> first, Function<B,C> second) {
-        // TODO implement
-        return null;
+        return second.compose(first);
     }
 
     /** converts a two-argument integer-taking function to a single-argument function
      * where the argument is fixed with given 'param'
      */
     public static Function<Integer, Integer> curry2Int(BiFunction<Integer, Integer, Integer> fn, Integer param) {
-        // TODO implement
-        return null;
+        return a -> fn.apply(param, a);
     }
 
     /** 'curries' a two-argument generic function - i.e. translates the evaluation of a function
@@ -54,7 +48,6 @@ public class HigherOrderFunctions {
      * A a -> B b -> fn a b
      */
     public static <A,B,C> Function<A,Function<B,C>> curry2(BiFunction<A,B,C> fn) {
-        // TODO implement
         return null;
     }
 

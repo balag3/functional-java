@@ -4,6 +4,8 @@ import com.googlecode.totallylazy.Sequence;
 import exercises.Collections;
 import org.junit.Test;
 
+import java.util.Optional;
+
 import static com.googlecode.totallylazy.Pair.pair;
 import static com.googlecode.totallylazy.Sequences.sequence;
 import static org.junit.Assert.assertEquals;
@@ -57,12 +59,12 @@ public class CollectionsTest {
 
     @Test
     public void longestNameInList() {
-        Option<String> longest = Collections.longestNameInList(sequence("Jack", "John", "Jill", "Richard", "Jim"));
-        assertTrue(longest.isDefined());
+        Optional<String> longest = Collections.longestNameInList(sequence("Jack", "John", "Jill", "Richard", "Jim"));
+        assertTrue(longest.isPresent());
         assertEquals("drahciR", longest.get());
 
-        Option<String> none = Collections.longestNameInList(sequence());
-        assertTrue(none.isEmpty());
+        Optional<String> none = Collections.longestNameInList(sequence());
+        assertTrue(!none.isPresent());
     }
 
     @Test
